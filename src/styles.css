@@ -1,1 +1,133 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/css-loader@6.7.3_webpack@5.80.0_esbuild@0.17.18_/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].rules[0].oneOf[0].use[1]!./node_modules/.pnpm/postcss-loader@7.2.4_@types+node@12.20.55_postcss@8.4.23_ts-node@8.3.0_typescript@5.0.4__type_yzp5pfliqsvsgldejdvwxaudsi/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].rules[0].oneOf[0].use[2]!./node_modules/.pnpm/resolve-url-loader@5.0.0/node_modules/resolve-url-loader/index.js??ruleSet[1].rules[6].rules[1].use[0]!./node_modules/.pnpm/sass-loader@13.2.2_sass@1.62.1_webpack@5.80.0_esbuild@0.17.18_/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[6].rules[1].use[1]!./src/styles.scss?ngGlobalStyle ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+  /* @import '../src/app/styles/tetris.scss'; */
+
+
+  * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #009688;
+  padding: 0;
+  margin: 0;
+  font: 20px/1 "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  overflow: hidden;
+  cursor: default;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  direction: ltr;
+  text-align: left;
+}
+
+.state {
+  width: 108px;
+  position: absolute;
+  top: 0;
+  right: 15px;
+}
+.state p {
+  line-height: 43px;
+  height: 50px;
+  padding: 10px 0 0;
+  white-space: nowrap;
+  clear: both;
+}
+.state .last-row {
+  position: absolute;
+  width: 114px;
+  top: 430px;
+  left: 0;
+}
+
+.number {
+  height: 24px;
+  font-size: 14px;
+  float: right;
+}
+.number span.num {
+  float: left;
+  width: 14px;
+  height: 24px;
+}
+.number .num-0 {
+  background-position: -75px -25px;
+}
+.number .num-1 {
+  background-position: -89px -25px;
+}
+.number .num-2 {
+  background-position: -103px -25px;
+}
+.number .num-3 {
+  background-position: -117px -25px;
+}
+.number .num-4 {
+  background-position: -131px -25px;
+}
+.number .num-5 {
+  background-position: -145px -25px;
+}
+.number .num-6 {
+  background-position: -159px -25px;
+}
+.number .num-7 {
+  background-position: -173px -25px;
+}
+.number .num-8 {
+  background-position: -187px -25px;
+}
+.number .num-9 {
+  background-position: -201px -25px;
+}
+.number .num-n {
+  background-position: -215px -25px;
+}
+.number .num-colon-faded {
+  background-position: -243px -25px;
+}
+.number .num-colon-solid {
+  background-position: -229px -25px;
+}
+
+.r {
+  float: right;
+}
+
+.l {
+  float: left;
+}
+
+.clear {
+  clear: both;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.w-40 {
+  width: 40px;
+}
+
+.bg {
+  background: url("/assets/img/bg.png") no-repeat;
+  overflow: hidden;
+}
+
+t-keyboard,
+t-button {
+  touch-action: pan-x pan-y pinch-zoom;
+}
+
+/*# sourceMappingURL=styles.css.map*/
