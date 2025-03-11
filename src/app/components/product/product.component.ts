@@ -1,4 +1,4 @@
-// product.components.ts
+// product.component.ts
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Product } from '../../state/product.model';
@@ -7,23 +7,29 @@ import { ProductService } from '../../state/product.service';
 
 @Component({
   selector: 'app-product',
-  templateUrl: './product.component.html',
-  styleUrl: './product.component.css'
+  templateUrl: './product.component.html'
 })
 export class ProductComponent implements OnInit {
   products$: Observable<Product[]> | undefined;
 
-  constructor(private productQuery: ProductQuery, private productService: ProductService) {}
+  constructor(
+    private productQuery: ProductQuery,
+    private productService: ProductService
+  ) {}
 
   ngOnInit() {
-    this.products$ = this.productQuery.products$;
+    // Initialize the store with some data if needed
+    // this.productService.initializeStore();
+
+    // Get products from the query
+    this.products$ = this.productQuery.getAllProducts();
   }
 
   addProduct() {
     const newProduct: Product = {
-      id: Math.random(),
+      id: Date.now(),
       name: 'New Product',
-      price: 100
+      price: 150
     };
     this.productService.addProduct(newProduct);
   }
