@@ -7,17 +7,19 @@ import { ProductModule } from './components/product/product.module';
 
 // Import Akita modules
 import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
+import { TetrisContainerModule } from './container/tetris-container/tetris-container.module';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    ProductModule,
     BrowserModule,
     AppRoutingModule,
+    AkitaNgDevtools.forRoot(),
 
-    AkitaNgDevtools.forRoot()
+    ProductModule,
+    TetrisContainerModule
   ],
   providers: [
     provideClientHydration()
