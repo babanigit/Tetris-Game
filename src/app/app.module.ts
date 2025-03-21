@@ -8,10 +8,13 @@ import { ProductModule } from './components/product/product.module';
 // Import Akita modules
 import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
 import { TetrisContainerModule } from './container/tetris-container/tetris-container.module';
+import { KeyboardComponent } from './components/keyboard/keyboard.component';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -19,7 +22,8 @@ import { TetrisContainerModule } from './container/tetris-container/tetris-conta
     AkitaNgDevtools.forRoot(),
 
     ProductModule,
-    TetrisContainerModule
+    TetrisContainerModule,
+    KeyboardComponent
   ],
   providers: [
     provideClientHydration()
